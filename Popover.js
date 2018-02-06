@@ -1,6 +1,7 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { PropTypes } from 'prop-types'
 import {
   StyleSheet,
   Dimensions,
@@ -10,6 +11,7 @@ import {
   View,
   Easing
 } from 'react-native';
+var createReactClass = require('create-react-class');
 
 var noop = () => {};
 
@@ -33,7 +35,7 @@ function Rect(x, y, width, height) {
   this.height = height;
 }
 
-var Popover = React.createClass({
+var Popover = createReactClass({
   propTypes: {
     isVisible: PropTypes.bool,
     onClose: PropTypes.func,
